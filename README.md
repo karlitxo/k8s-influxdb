@@ -1,22 +1,17 @@
 # Deployment of influxdb cluster in kubernetes
 
 	The main goals of the project:
-	 - create influxdb cluster in kubernetes.
+	 - create influxdb cluster in kubernetes, using Ansible
 	 - configure influxdb cluster.
 	 - Stress Test influxdb cluster.
 	 - Tune influxdb configs to achieve current usecases.
 
 ## Prerequisites
-- [docker-machine] (https://docs.docker.com/engine/installation/mac/)
-- Local Machine:
-  [kubernetes with OSX] (https://github.com/TheNewNormal/kube-solo-osx)
-    or
-  [kubernetes with vagrant] (http://kubernetes.io/v1.1/docs/getting-started-guides/vagrant.html)
-- AWS:
+- Kubernetes cluster on AWS or other:
   [kubernetes with coreos] (https://coreos.com/kubernetes/docs/latest/kubernetes-on-aws.html)
 
 ## Influxdb version
-   0.10.0-1
+   0.10.3
 
 ## Deploy influxdb cluster to kubernetes cluster
 - Create "infra" namespace
@@ -67,7 +62,8 @@
 		$ kubectl create -f ./k8s/influxdb-grafana-rc.yaml
 	```
 	
-## Verify cluster setup
+## Verify cluster setup - Outdated
+
 - ssh to k8s minion
 	
 	```
