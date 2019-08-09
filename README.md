@@ -26,7 +26,11 @@
 		$ kubectl config set-context $(CONTEXT) --namespace=<insert-namespace-name-here>
 	``` 
 - Deploy influxdb service and cluster
-	- A prebuilt docker image is deployed at: https://hub.docker.com/r/supershal/influxdb/
+	
+	Outdated: A prebuilt docker image is deployed at: https://hub.docker.com/r/supershal/influxdb/
+	
+	- Using tutumcloud/influxdb 0.10.3 with tweaked configuration
+	
 	1. deploy influxdb service
 	```
 		$ kubectl create -f ./k8s/influxdb-svc.yaml
